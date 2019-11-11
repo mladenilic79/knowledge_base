@@ -176,7 +176,7 @@ push
 @@@@@ workflow @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@
-@@@ update local branche with local master
+@@@@@ update local branche with local master
 
 $ git checkout <feature-branch>
 $ git merge master -m 'comment'
@@ -190,6 +190,13 @@ pushing own branch online:
 
 contine working on my own branch:
 1. git push origin <<my own branch>>
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@ deleting excluded files @ directories & from origin
+
+git rm -r --cached <directory>
+git commit -m 'Remove the now ignored directory'
+git push origin master
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@
 @@@@@ conflicts @@@@@@@@@@
