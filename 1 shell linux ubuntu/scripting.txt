@@ -1,0 +1,22 @@
+
+add on start of script
+	#!/bin/bash
+or
+	#!/bin/sh
+
+save script with extension
+	filename.sh
+
+execute with
+	$ bash path/filename.sh
+or
+	$ sh path/filename.sh
+
+or add permissions (add execute/read/write to all users)
+	$ chmod a+xrw /home/mmm/bin/mouseonreboot.sh
+than execute with
+	$ paht/filename.sh
+
+read file permissions with
+	$ ls -l /home/mmm/bin/mouseonreboot.sh
+

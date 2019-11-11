@@ -1,0 +1,18 @@
+
+#check for online data of specified software/package
+apt list ruby
+
+#check location of specified software/package
+which ruby
+
+#check version of specified software/package
+ruby -v
+
+#remove specified software/package
+sudo apt remove ruby
+#immediately after to remove related packages
+sudo apt autoremove
+
+
+
+

@@ -1,0 +1,190 @@
+1558941011181	Rename package 'strategyPattern'
+1558941025021	Rename package 'astrategyPattern'
+1558941037897	Rename package 'observerPattern'
+1558941051035	Rename package 'decoraterPattern'
+1558941075201	Rename package 'aStrategyPattern'
+1558941083143	Rename package 'bObserverPattern'
+1558941090435	Rename package 'cDecoraterPattern'
+1558943247197	Delete element
+1558944366204	Rename package 'dFactory'
+1558944388000	Copy package
+1558958550547	Delete element
+1558958565804	Rename package 'dFactory'
+1559028040003	Rename type 'Pizza'
+1559028134687	Rename type 'ChicagoStyleCheesePizza'
+1559028145713	Rename type 'NYStyleCheesePizza'
+1559028745510	Rename compilation unit 'Main.java'
+1559029237072	Rename type 'PizzaStore'
+1559029247746	Rename type 'ChicagoPizzaStore'
+1559029257410	Rename type 'NYPizzaStore'
+1559032913376	Rename package 'dFactorySimple'
+1559045066144	Copy compilation unit
+1559045085603	Copy compilation unit
+1559045093583	Copy compilation unit
+1559045099698	Copy compilation unit
+1559045105358	Copy compilation unit
+1559045147020	Move compilation unit
+1559045158706	Copy compilation unit
+1559047546518	Copy compilation unit
+1559107418385	Delete element
+1559107434164	Copy package
+1559110654517	Delete element
+1559110659877	Delete element
+1559110665604	Delete element
+1559110669638	Delete element
+1559110673233	Delete element
+1559110677268	Delete element
+1559110680710	Delete element
+1559110684416	Delete element
+1559115725524	Copy compilation unit
+1559115740224	Copy compilation unit
+1559115746194	Copy compilation unit
+1559115751304	Copy compilation unit
+1559115757994	Copy compilation unit
+1559115763634	Copy compilation unit
+1559115769364	Copy compilation unit
+1559115774976	Copy compilation unit
+1559117343472	Rename type 'PizzaIngredientFactory'
+1559117355510	Rename type 'NYPizzaIngredientFactory'
+1559117365436	Rename type 'ChicagoPizzaIngredientFactory'
+1559118041098	Rename compilation unit 'CheesePizza.java'
+1559118065858	Rename compilation unit 'ClamPizza.java'
+1559118770734	Delete element
+1559118793399	Rename type 'CaliforniaPizzaStore'
+1559122094388	Copy compilation unit
+1559122509558	Rename compilation unit 'CClamPizza.java'
+1559122521353	Rename compilation unit 'CCheesePizza.java'
+1559122531073	Rename compilation unit 'ACheesePizza.java'
+1559122538890	Rename compilation unit 'AClamPizza.java'
+1559123381461	Rename type 'FDough'
+1559123391346	Rename type 'FSauce'
+1559123399295	Rename type 'FCheese'
+1559123413915	Rename type 'FVeggies'
+1559123419692	Rename type 'FPepperoni'
+1559123426157	Rename type 'FClams'
+1559123452221	Rename compilation unit 'AACheesePizza.java'
+1559123459751	Rename compilation unit 'AAClamPizza.java'
+1559123485636	Rename type 'AChicagoStyleCheesePizza'
+1559123492846	Rename type 'AChicagoStyleClamPizza'
+1559123500306	Rename type 'AChicagoStylePepperoniPizza'
+1559123507271	Rename type 'AChicagoStyleVeggiePizza'
+1559123515336	Rename type 'ANYStyleCheesePizza'
+1559123521936	Rename type 'ANYStyleClamPizza'
+1559123529301	Rename type 'ANYStylePepperoniPizza'
+1559123537076	Rename type 'ANYStyleVeggiePizza'
+1559123555088	Rename type 'APizza'
+1559123580054	Rename type 'DPizzaIngredientFactory'
+1559124438707	Rename type 'BCaliforniaPizzaStore'
+1559124446792	Rename type 'BChicagoPizzaStore'
+1559124455944	Rename type 'BNYPizzaStore'
+1559124465704	Rename type 'BPizzaStore'
+1559124480605	Rename type 'AAPizzaIngredientFactory'
+1559124531443	Rename type 'DCaliforniaPizzaIngredientFactory'
+1559124541315	Rename type 'DChicagoPizzaIngredientFactory'
+1559124549886	Rename type 'DNYPizzaIngredientFactory'
+1559125101350	Rename type 'ThinCrustDough'
+1559125111039	Rename type 'ADough'
+1559125128454	Rename type 'ACheese'
+1559125140329	Rename type 'AClams'
+1559125254938	Rename type 'APepperoni'
+1559125265763	Rename type 'ASauce'
+1559125274678	Rename type 'AVeggies'
+1559125292310	Rename type 'AACheese'
+1559125312376	Rename type 'AaCheese'
+1559125437872	Rename type 'ACZThinCrustDough'
+1559125459915	Rename type 'MarinaraSauce'
+1559125470951	Rename type 'ACzThinCrustDough'
+1559125494726	Rename type 'AEaMarinaraSauce'
+1559125509933	Rename type 'AEnMarinaraSauce'
+1559125522459	Rename type 'ACaThinCrustDough'
+1559125746899	Rename type 'ReggianoCheese'
+1559125834809	Rename type 'AACheese'
+1559125844860	Rename type 'AAdReggianoCheese'
+1559125876781	Rename type 'ACheese'
+1559125887262	Rename type 'AdReggianoCheese'
+1559125962293	Rename type 'Garlic'
+1559125977104	Rename type 'AEzGarlic'
+1559126131967	Rename type 'Onion'
+1559126327122	Rename type 'Mushroom'
+1559126724590	Rename type 'AAdReggianoCheese'
+1559126734501	Rename type 'ACeThinCrustDough'
+1559126744237	Rename type 'AEtMarinaraSauce'
+1559126754498	Rename type 'AFzGarlic'
+1559126763069	Rename type 'AFzOnion'
+1559126772070	Rename type 'AFzMushroom'
+1559126822958	Rename type 'RedPepper'
+1559128363110	Rename type 'SlicedPepperoni'
+1559128415941	Rename type 'FreshClams'
+1559129273013	Rename type 'ThickCrustDough'
+1559129805742	Rename type 'PlumTomatoSauce'
+1559129891673	Rename type 'MozzarellaCheese'
+1559129972177	Rename type 'BlackOlives'
+1559130781162	Rename type 'Spinach'
+1559130871805	Rename type 'Eggplant'
+1559130911546	Rename type 'FrozenClams'
+1559132452701	Rename type 'LPizza'
+1559132735098	Delete element
+1559132740372	Delete element
+1559132744637	Delete element
+1559132748574	Delete element
+1559132753274	Delete element
+1559132757929	Delete element
+1559132763086	Delete element
+1559132767678	Delete element
+1559133154092	Rename compilation unit 'JCheesePizza.java'
+1559133164492	Rename compilation unit 'JClamPizza.java'
+1559194543626	Rename type 'IPizzaStore'
+1559194560981	Rename type 'INYPizzaStore'
+1559194576185	Rename type 'ICaliforniaPizzaStore'
+1559194586757	Rename type 'IChicagoPizzaStore'
+1559195126593	Rename package 'dFactory'
+1559195158661	Rename type 'ZMain'
+1559195172026	Rename type 'ZMain'
+1559195184760	Rename type 'ZMain'
+1559196198161	Rename package 'dFactorySimple'
+1559196213615	Rename package 'dFactoryMethod'
+1559196225015	Rename package 'dFactoryAbstract'
+1559196241091	Rename package 'dFactoryaSimple'
+1559196255397	Rename package 'dFactorybMethod'
+1559196265229	Rename package 'dFactorycAbstract'
+1559196726351	Rename type 'BChicagoPizzaStore'
+1559196931391	Rename type 'SimplePizzaFactory'
+1559196947147	Rename type 'PizzaStore'
+1559197558651	Rename local variable 'chicagoStore'
+1559197667789	Rename type 'AChicagoStyleCheesePizza'
+1559197682032	Rename type 'AChicagoStyleClamPizza'
+1559197690253	Rename type 'AChicagoStylePepperoniPizza'
+1559197698755	Rename type 'AChicagoStyleVeggiePizza'
+1559197710595	Rename type 'BSimplePizzaFactory'
+1559197719565	Rename type 'CPizzaStore'
+1559197739190	Delete element
+1559202057832	Rename package 'dFactoryASimple'
+1559202071181	Rename package 'dFactoryBMethod'
+1559202086838	Rename package 'dFactoryCAbstract'
+1559202394284	Rename type 'BChicagoPizzaStore'
+1559202408121	Rename type 'BNYPizzaStore'
+1559202648830	Delete element
+1559202655617	Delete element
+1559202822318	Rename type 'BPizzaStore'
+1559202831787	Rename type 'BNYFactory'
+1559202839119	Rename type 'BChicagoFactory'
+1559202848698	Rename type 'AChicagoStyleCheesePizza'
+1559202856108	Rename type 'AChicagoStylePepperoniPizza'
+1559202863424	Rename type 'AChicagoStyleVeggiePizza'
+1559202871645	Rename type 'ANYStyleCheesePizza'
+1559202879024	Rename type 'ANYStylePepperoniPizza'
+1559202886746	Rename type 'ANYStyleVeggiePizza'
+1559204643689	Rename local variable 'nyStore'
+1559204652971	Rename local variable 'chicagoStore'
+1559214766539	Rename type 'GCaliforniaPizzaStore'
+1559214778026	Rename type 'GChicagoPizzaStore'
+1559214789398	Rename type 'GNYPizzaStore'
+1559214830090	Delete element
+1559287653022	Rename package 'gSingleton'
+1559287796118	Rename package 'gSingletonBasic'
+1559316356870	Move compilation unit
+1559316401963	Rename package 'jCommand'
+1559316496507	Copy compilation unit
+1559316734318	Delete element
+1559316743909	Copy compilation unit
+1559316769648	Copy compilation unit

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;variousClasses.Date_vc&apos; to &apos;DateOld_vc&apos;&#x0D;&#x0A;- Original project: &apos;amojprojekat10&apos;&#x0D;&#x0A;- Original element: &apos;variousClasses.Date_vc&apos;&#x0D;&#x0A;- Renamed element: &apos;variousClasses.DateOld_vc&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Date_vc&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;variousClasses{Date_vc.java[Date_vc" matchStrategy="1" name="DateOld_vc" qualified="false" references="true" similarDeclarations="false" stamp="1560414477423" textual="false" version="1.0"/>
+</session>

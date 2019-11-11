@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Lekari.xsl"?>
+<!--xsl works with or without doctype-->
+<!--<!DOCTYPE autoschema [
+<!ELEMENT lekari (lekar)*>
+<!ELEMENT lekar (ime|prezime|oblast)*>
+<!ATTLIST lekar
+        id	ID #IMPLIED
+        >
+<!ELEMENT ime (#PCDATA)>
+<!ELEMENT prezime (#PCDATA)>
+<!ELEMENT oblast (#PCDATA)>
+]>-->
+<lekari>
+    <lekar id="01">
+        <ime>Pera</ime>
+        <prezime>Peric</prezime>
+        <oblast>Opsta praksa</oblast>
+    </lekar>
+    <lekar id="02">
+        <ime>Laza</ime>
+        <prezime>Lazic</prezime>
+        <oblast>Opsta praksa</oblast>
+    </lekar>
+    <lekar id="03">
+        <ime>Mika</ime>
+        <prezime>Mikic</prezime>
+        <oblast>Opsta praksa</oblast>
+    </lekar>
+    <lekar id="04">
+        <ime>Toma</ime>
+        <prezime>Tomic</prezime>
+        <oblast>Opsta praksa</oblast>
+    </lekar>
+    <lekar id="05">
+        <ime>Moma</ime>
+        <prezime>Momic</prezime>
+        <oblast>Oftamologija</oblast>
+    </lekar>
+    <lekar id="06">
+        <ime>Mira</ime>
+        <prezime>Mirkovic</prezime>
+        <oblast>Ginekologija</oblast>
+    </lekar>
+    <lekar id="07">
+        <ime>Jelena</ime>
+        <prezime>Jelic</prezime>
+        <oblast>Ginekologija</oblast>
+    </lekar>
+    <lekar id="08">
+        <ime>Ivan</ime>
+        <prezime>Ivic</prezime>
+        <oblast>Kardiologija</oblast>
+    </lekar>
+    <lekar id="09">
+        <ime>Marko</ime>
+        <prezime>Markovic</prezime>
+        <oblast>Kardiologija</oblast>
+    </lekar>
+    <lekar id="10">
+        <ime>Joca</ime>
+        <prezime>Jocic</prezime>
+        <oblast>ORL</oblast>
+    </lekar>
+</lekari>

@@ -1,0 +1,22 @@
+
+check to see if cron is installed
+	$ dpkg -l cron
+check to see if cron is running
+	$ systemctl status cron
+
+list cron bobs
+	$ crontab -l
+
+to set cron with delay on reboot with nano
+open cron user specific & must run some commands to install this ???
+	$ crontab -e
+open cron for all users (prefered)
+	$ sudo nano /etc/crontab
+paste path or command on last line
+	$ @reboot sleep 90 && /home/mmm/bin/mouseonreboot.sh
+or
+	$ @reboot sleep 90; /home/mmm/bin/mouseonreboot.sh
+save & exit
+	CTRL-o / enter
+	CTRL-x
+

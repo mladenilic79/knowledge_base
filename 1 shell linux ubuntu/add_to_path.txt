@@ -1,0 +1,19 @@
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#for adding to path - rvm ???
+
+#to open automaticaly without navigation on every boot
+#go to home open file .profile & add to end
+
+source ~/.rvm
+
+#for folder .rvm for example
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2
+#for adding to path generaly
+
+#check for all directories added to path
+$ echo path
+
+#add directory to path
+$ export PATH=$PATH:/place/with/the/file

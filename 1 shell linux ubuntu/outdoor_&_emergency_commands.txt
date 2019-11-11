@@ -1,0 +1,44 @@
+
+@@@@@@@@@@@@@@@@@@@@@@@@
+TERMINAL @@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@
+
+#interupt prompt in terminal by pressing q
+
+#interupt infinite loop or similar in terminal
+	ctrl-c
+
+@@@@@@@@@@@@@@@@@@@@@@@@
+GUI @@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@@@@@@@@
+
+#hide unhide icons in linux gui
+	ctrl h
+
+shortcut for teminal:
+	CTRL-ALT-T
+
+set custom shortcuts for (instead of logout) for resource monitor:
+	CTRL-ALT-DEL
+put name:
+	gnome-system-monitor
+put command:
+	gnome-system-monitor
+
+open terminal for killing frozen application and type:
+	$ xkill
+than click on any frozen window with a mouse
+
+go to shell:
+	CTRL-ALT-F2 (through F5)
+kill process:
+	sudo killall <name-of-the-application>
+go back to desktop:
+	CTRL-ALT-F1
+
+activate shortcut for killing (restarts gui/gnome & kills all apps) x server on gnome tweaks
+keyboard & mouse
+	additional layout options
+		key sequence to kill the X server
+	CTRL-ALT-Backspace
+

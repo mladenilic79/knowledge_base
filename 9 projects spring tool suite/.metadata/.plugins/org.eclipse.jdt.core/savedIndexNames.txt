@@ -1,0 +1,1 @@
+INDEX VERSION 1.131+E:\IT PROGRAMMING\9 projects spring tool suite\.metadata\.plugins\org.eclipse.jdt.core

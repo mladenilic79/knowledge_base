@@ -1,0 +1,57 @@
+1559464565209	Rename type 'Command'
+1559464583442	Rename type 'Main'
+1559464650938	Rename type 'NoCommand'
+1559464669536	Rename type 'MacroCommand'
+1559464685753	Rename type 'RemoteControl'
+1559464703970	Rename type 'XRemoteControl'
+1559464713136	Rename type 'YMacroCommand'
+1559539279746	Delete element
+1559539329742	Delete element
+1559539359593	Rename type 'StereoOffWithCDCommand'
+1559540932453	Delete element
+1559540945038	Rename package 'kCommandMultiple'
+1559541401358	Rename type 'ZMain'
+1559548827446	Rename package 'jCommandMultiple'
+1559556653432	Rename type 'TurkeyAdapter'
+1559573296553	Rename type 'HomeTheaterFacade'
+1559628536812	Rename package 'jTemplate'
+1559630153083	Rename package 'mTemplate'
+1559638283493	Copy package
+1559638535293	Rename type 'CaffeineBeverage'
+1559638936976	Rename type 'Coffe'
+1559638950364	Rename type 'CoffeWithHook'
+1559638964258	Rename type 'Tea'
+1559714178091	Rename package 'oPatternKoji'
+1559715205106	Rename type 'ZMain'
+1559715472688	Rename type 'Waitress'
+1559717628078	Rename type 'ZDinerMenuIterator'
+1559720472578	Rename package 'oIterator'
+1559720496415	Rename type 'Main'
+1559720508740	Rename type 'MenuItem'
+1559720588808	Rename type 'Iterator'
+1559720754452	Copy package
+1559720798608	Delete element
+1559721168373	Delete element
+1559733806709	Copy package
+1559733828078	Rename package 'pIteratorComposite'
+1559737079626	Delete element
+1559737219060	Delete element
+1559753498299	Delete element
+1559753505479	Delete element
+1559753511263	Delete element
+1559753538140	Delete element
+1559753585920	Rename type 'AMenuItem'
+1559753595106	Rename type 'MenuComponent'
+1559754472445	Rename package 'qIteratorComposite'
+1559754490070	Copy package
+1559756300866	Delete element
+1559756304959	Delete element
+1559799993859	Rename package 'qCompositeIterator'
+1559807033319	Rename type 'GumballMachineTestDrive'
+1559807047160	Rename type 'GumballMachine'
+1559807056931	Rename type 'State'
+1559884859525	Copy package
+1559885188952	Rename type 'GumballMonitor'
+1559901255134	Delete element
+1559901403196	Delete element
+1559923239679	Delete element

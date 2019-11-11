@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;javaSpringBootDB_bookmaker&apos;" deleteContents="false" description="Delete resource &apos;javaSpringBootDB_bookmaker&apos;" element1="/javaSpringBootDB_bookmaker" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1563084929083"/>
+</session>

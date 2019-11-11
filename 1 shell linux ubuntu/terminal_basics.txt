@@ -1,0 +1,80 @@
+
+# check for shell type, bash or otherwise
+$ echo $SHELL
+
+#check who is current user
+$ echo $USER
+
+#clear screen
+$ clear
+
+#access bash settings with sublime
+$ subl ~/.bashrc
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+navigation
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+#return present location
+$ pwd
+
+#list current folder
+$ ls
+#list current folder with hidden content
+$ ls -a
+#list with details
+$ ls -la
+
+#change directory
+$ cd Documents
+# or alternatively
+$ cd ~/Documents
+$ cd Home/Music/Folder
+
+#go back one directory
+$ cd ..
+#go back two directories
+$ cd ../..
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+files/folders
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+#create directories
+$ mkdir newFolder
+
+#copy file/folder
+$ cp oldfilename.txt newfilename.txt
+
+#new text file
+$ cat > filename.txt
+#than enter text and finish with:
+ctrl-d
+#read file with
+$ cat filename.txt
+
+#also create file with
+$ touch filename.txt
+
+#create/replace file & content
+$ echo "random content" > filename.txt
+#append content to file
+$ echo "random content" >> filename.txt
+
+#edit file with sublime
+$ subl filename.txt
+
+#delete file/folder
+$ rm file.txt
+$ rm folder/
+#force delete forlder even if not empty (permanent delete)
+$ rm -rf folder/
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+cleaning linux
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+sudo apt autoclean
+sudo apt-get clean
+sudo apt autoremove
+

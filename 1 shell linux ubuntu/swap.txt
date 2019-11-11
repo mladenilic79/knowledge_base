@@ -1,0 +1,9 @@
+
+create swap partition with grub and activate with swapon option
+
+attach existing swap partition
+	enter fstab with with sublime
+		$ sudo subl /etc/fstab
+	add to last line
+		UUID=419a45a5-26fe-43b9-b0be-8f51d7120f47 none            swap    sw              0       0
+	check if it works on resource monitor
