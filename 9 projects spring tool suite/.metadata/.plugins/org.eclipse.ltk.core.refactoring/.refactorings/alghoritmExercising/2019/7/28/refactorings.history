@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;Princeton_longestConsecutiveRun.java&apos; to &apos;alghoritmExercising/src/exercises&apos;&#x0D;&#x0A;- Original project: &apos;alghoritmExercising&apos;&#x0D;&#x0A;- Destination element: &apos;alghoritmExercising/src/exercises&apos;&#x0D;&#x0A;- Original element: &apos;exercises.Princeton_longestConsecutiveRun.java&apos;" description="Copy compilation unit" destination="/src&lt;exercises" element1="/src&lt;exercises{Princeton_longestConsecutiveRun.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1563006395534" units="1" version="1.0"/>
-</session>
