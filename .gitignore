@@ -1,4 +1,4 @@
-*.pdf
+# *.pdf
 0\ interview/
 0\ it\ akademy/
 0\ learning\ plan/
@@ -6,6 +6,7 @@
 2\ html_css\ books/
 4\ python\ django\ cheet\ sheet/
 6\ java\ books/
+9\ projects\ intellij\ idea/
 9\ projects\ rubymine/RubyOnRails_Testing3/node_modules/
 9\ projects\ rubymine/RubyOnRails_Testing3/tmp/
 9\ projects\ spring\ tool\ suite/
