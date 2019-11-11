@@ -195,6 +195,8 @@ contine working on my own branch:
 @@@@@ deleting excluded files @ directories & from origin
 
 git rm -r --cached <directory>
+or
+git rm -r --cached .
 git commit -m 'Remove the now ignored directory'
 git push origin master
 
