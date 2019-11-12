@@ -1,0 +1,42 @@
+
+<%# application.html.erb layout is default one & is pulled automatically %>
+<%# by any controller where is not specified something else %>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <%# pulling data from controller & controller/concern %>
+<!--    <title>RubyOnRailsTesting2<%#= @page_title %></title>-->
+<!--    <meta name="keywords" content="<%#= @seo_keywords %>" />-->
+
+    <title>RubyOnRailsTesting3</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%# alternatively if not default but some other page ??????????????? %>
+    <%#= stylesheet_link_tag 'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%# added flash messages from/for devise %>
+<!--    <p class="notice"><%#= notice %></p>-->
+<!--    <p class="alert"><%#= alert %></p>-->
+
+    <%# added button from/for devise from helper methods %>
+<!--    <p><%#= login_helper %></p>-->
+
+    <%# pulling partial from views/shared/_nav.html.erb %>
+<!--    <p><%#= render "shared/nav" %></p>-->
+    <%# alternatively create local varibale that represents class for css %>
+<!--    <p><%#= render "shared/nav", location: 'top' %></p>-->
+
+    <%# rails uses yield for access to other pages %>
+    <%= yield %>
+
+    <%# see session[:source] in application controller/concern/set_source & %>
+    <%# helper/application_helper, passing layout in argument %>
+<!--    <p><%#= source_helper("application") %></p>-->
+  </body>
+</html>

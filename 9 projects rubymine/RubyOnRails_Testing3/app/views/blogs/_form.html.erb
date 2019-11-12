@@ -1,0 +1,43 @@
+
+<%# _ in front of name means it is a partial %>
+
+<%# soon deprecated form_for method bindes attributes to the attributes in %>
+<%# database record, automaticaly prepopulates fields, similar to form_with method %>
+<%= form_with(model: blog, local: true) do |form| %>
+
+  <% if blog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(blog.errors.count, "error") %> prohibited this blog from being saved:</h2>
+
+      <ul>
+        <% blog.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%# <<:title>> is treated as a database attribute lookup method %>
+    <%# check if these values exists, & if do prepolulate those fields %>
+    <%= form.label :blog_name %>
+    <%= form.text_field :blog_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :blog_number %>
+    <%= form.number_field :blog_number %>
+  </div>
+
+  <%# showcasing association with parent class %>
+  <%# (controllers/blogs_controller, views/show, views/index, views/_form) %>
+  <div class="field">
+    <%= form.label :parent_id %>
+    <%= form.text_field :parent_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+
+<% end %>

@@ -1,0 +1,44 @@
+<%= form_with(model: parent, local: true) do |form| %>
+
+  <% if parent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(parent.errors.count, "error") %> prohibited this parent from being saved:</h2>
+
+      <ul>
+        <% parent.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :parent_name %>
+    <%= form.text_field :parent_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :parent_number %>
+    <%= form.number_field :parent_number %>
+  </div>
+
+  <%# showcasing nested/nesting elements in view %>
+  <%# (model/parent controller/parent_controller 2x, views/parents/_form, views/parent/show) %>
+  <%# fields_for is special method for nesting forms & attributes %>
+  <ul>
+    <%= form.fields_for :blogs do |blog_form| %>
+      <li>
+        <%= blog_form.label :blog_name %>
+        <%= blog_form.text_field :blog_name %>
+      </li>
+      <li>
+        <%= blog_form.label :blog_number %>
+        <%= blog_form.text_field :blog_number %>
+      </li>
+    <% end %>
+  </ul>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
