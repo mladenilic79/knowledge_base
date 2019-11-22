@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="E:/IT PROGRAMMING/5 java libraries/javax.mail-1.5.0.jar"/>
-	<classpathentry kind="lib" path="E:/IT PROGRAMMING/5 java libraries/json-simple-1.1.jar"/>
+	<classpathentry kind="lib" path="/media/mmm/3AEE3EE1EE3E955B/IT PROGRAMMING/6 java libraries/javax.mail-1.5.0.jar"/>
+	<classpathentry kind="lib" path="/media/mmm/3AEE3EE1EE3E955B/IT PROGRAMMING/6 java libraries/json-simple-1.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
