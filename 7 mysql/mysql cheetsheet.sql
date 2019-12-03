@@ -29,8 +29,7 @@ cmd commands
         SELECT * FROM INFORMATION_SCHEMA.SCHEMATA
         /* returns all tables on server */
         SELECT * FROM INFORMATION_SCHEMA.TABLES
-    /* mysql db
-    performance_schema */
+    /* performance_schema */
 
 /* show isolation level */
 SELECT @@TRANSACTION_ISOLATION
@@ -39,7 +38,6 @@ SELECT @@TRANSACTION_ISOLATION
 SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
 /* set global transaction isolation level */
 SET SESSION TRANSACTION ISOLATION LEVEL SERIALIZABLE;
-*/
 
 /* kill process id kills process in question */
 KILL 43
@@ -48,25 +46,27 @@ KILL 43
 -- oneline comment
 /* multiline comment */
 
-/* strings are enclosed in '' or "" */
+/* strings are enclosed in ' or " */
 
 /* write to screen */
 SELECT 'ZDRAVO!' ;
 
-/* check required parameters for password */
+/* check required parameters for password to pass validation */
 SHOW VARIABLES LIKE 'validate_password%';
 /* switch password policy levels 0, 1, 2 */
 SET GLOBAL validate_password.policy = 0;
 
+/* show all users, mysql.user must be smallcaps*/
+SELECT * FROM mysql.user;
+SELECT User, Host FROM mysql.user;
 /* can access from specified location using password */
 CREATE USER 'John'@'localhost' identified BY '123';
 CREATE USER 'John'@'209.85.445.498' identified BY '123';
 /* can access from any location */
 CREATE USER 'John'@'%' identified BY '123';
+/* alter & drop */
 ALTER USER 'John'@'localhost' identified by 'ABC';
 DROP USER 'John'@'localhost';
-/* show all users */
-SELECT User, Host, Password FROM mysql.USER; /* password might be left out */
 
 /* grants create and revoke and show from table or db */
 GRANT SELECT ON sakila TO 'John'@'localhost';
@@ -126,6 +126,8 @@ CREATE TABLE IF NOT EXISTS Orders (
     OrderID int NOT NULL AUTO_INCREMENT,
     OrderNumber int NOT NULL DEFAULT 6,
     PersonID int,
+    /* add index to field */
+    INDEX (OrderNumber) 
     /* declare primary key field */
     PRIMARY KEY (OrderID),
     /* declare foreign key (field in this) references other table (id in other) */
@@ -135,10 +137,8 @@ CREATE TABLE IF NOT EXISTS Orders (
 /* variant 2 implicit primary key */
 CREATE TABLE tableName (
     fieldName1 VARCHAR(10),
-    fieldName2 VARCHAR(20),
     /* declare primary key field */
     OrderID INT NOT NULL PRIMARY KEY,
-    OrderNumber INT NOT NULL,
     PersonID INT,
     /* declare foreign key (field in this) references other table (id in other) */
     FOREIGN KEY (PersonID) REFERENCES Persons(PersonID)
@@ -177,9 +177,6 @@ SELECT * FROM sakila.actor WHERE MATCH(last_name) AGAINST('GARLAND' IN BOOLEAN M
 
 /* delete indexes */
 alter table sakila.actor drop index index_name_create;
-alter table sakila.actor drop index index_name_alter;
-alter table sakila.actor drop index index_name_create_full;
-alter table sakila.actor drop index index_name_alter_full;
 
 /*
 indexes explanation
@@ -209,7 +206,7 @@ ALTER TABLE persons ADD COLUMN putnik VARCHAR(30);
 /* alter specs of field */
 ALTER TABLE persons MODIFY COLUMN putnik VARCHAR(35);
 /* for changing position of column use alter with BEFORE / AFTER */
-ALTER TABLE persons MODIFY putnik varchar(35) AFTER personsid;
+ALTER TABLE persons MODIFY COLUMN putnik varchar(35) AFTER personsid;
 /* delete field */
 ALTER TABLE persons DROP COLUMN putnik;
 /* deleting table */
@@ -263,30 +260,29 @@ enum - enum('januar', 'februar', 'mart','april', 'maj', 'jun')
 set - set('a','b','c','d')
 */
 
+/* database positioning */
+USE sakila;
+
 /* insert */
-INSERT INTO world.tablename /* can use only tablename if already on db */
+INSERT INTO world.tablename
 (fieldname1, fieldname2, ordernumber, personid, orderid)
 VALUES  ('pera', 'eric', 3, 2, 4),
         ('sav', 'los', 5, 1, 3);
 
 /* update */
-UPDATE world.tablename /* can use only tablename if already on db */
+UPDATE world.tablename
 SET fieldname1 = 'pera', 
     fieldname2 = 'perovic' 
 WHERE orderid = 1;
 
 /* delete */
-DELETE FROM world.tablename /* can use only tablename if already on db */
+DELETE FROM world.tablename
 WHERE fieldname1 = 'pera';
 /* delete - empty table */
-DELETE FROM world.tablename; /* can use only tablename if already on db */
-
-/* database positioning */
-USE sakila;
+DELETE FROM world.tablename;
 
 /* aliases - as */
 SELECT 'actor' AS 'glumac'
-SELECT actor as glumac
 SELECT actor as g
 SELECT actor g
 
@@ -304,14 +300,18 @@ SELECT DISTINCT first_name FROM actor;
 
 /* not equal 2 versions */
 SELECT * FROM sakila.actor WHERE actor_id <> 1 AND first_name != 'NICK';
-SELECT * FROM sakila.actor WHERE actor_id = 4 OR actor_id = 5;
+SELECT * FROM sakila.actor WHERE actor_id = 4 OR actor_id >= 5;
 SELECT * FROM sakila.actor WHERE actor_id NOT BETWEEN 10 AND 20;
-SELECT * FROM actor WHERE actor_id IN(1,3,53,23);
-SELECT * FROM actor WHERE actor_id NOT IN(1,3,53,23);
+SELECT * FROM actor WHERE actor_id IN (1,3,53,23);
+SELECT * FROM actor WHERE actor_id NOT IN (1,3,53,23);
 
-/* char search */
+/* LIKE */
+/* percentage % matches any string of zero or more characters */
 SELECT * FROM actor WHERE first_name LIKE '%NN%' OR last_name LIKE 'JO%';
-SELECT * FROM actor WHERE first_name LIKE 'J_E'; /* _ - replaces one character */
+/* underscore _ wildcard matches any single character */
+SELECT * FROM actor WHERE first_name NOT LIKE 'J_E';
+/* backslash \ is default escape character */
+SELECT * FROM actor WHERE first_name LIKE '\_pera';
 
 /* group by */
 SELECT city.name, sum(city.population) FROM city GROUP BY city.name 
@@ -335,9 +335,8 @@ SELECT first_name, last_name FROM actor LIMIT 10, 5;
 
 /* nested select */
 SELECT city.district FROM city
-WHERE city.name IN 
-(SELECT city.name FROM city
-WHERE city.population > 8000000);
+  WHERE city.name IN (SELECT city.name FROM city
+                        WHERE city.population > 8000000);
 
 /* exists returns true/false from subquery */
 SELECT country.name FROM country 
@@ -367,11 +366,16 @@ SELECT city.name FROM city WHERE city.id = ALL
 
 SELECT country.name, city.name
 FROM city, country
-WHERE city.CountryCode = country.Code;
+WHERE city.CountryCode = country.Code
+/* this also can be used for joining */
+AND where marks between min_Mark and Max_Mark;
 /* or */
 SELECT country.name, city.name
-FROM city inner JOIN country
-ON city.CountryCode = country.Code;
+FROM city 
+    INNER JOIN country
+        ON city.CountryCode = country.Code
+    LEFT OUTER JOIN images
+        ON dashboard_messages.image_id = images.image_id;
 
 /* left join */
 1		1
@@ -404,15 +408,6 @@ SELECT country.name, city.name
 FROM city RIGHT JOIN country
 ON city.CountryCode = country.Code;
 
-/* multiple join example untested */
-SELECT dashboard_data.headline, dashboard_data.message, 
-dashboard_messages.image_id, images.filename
-FROM dashboard_data 
-    INNER JOIN dashboard_messages 
-        ON dashboard_message_id = dashboard_messages.id
-    LEFT OUTER JOIN images
-        ON dashboard_messages.image_id = images.image_id 
-
 /* view */
 CREATE VIEW vieww AS SELECT * FROM actor;
 CREATE OR REPLACE VIEW vieww AS SELECT * from actor;
@@ -425,11 +420,22 @@ DROP VIEW vieww;
 
 SELECT SUM(population) FROM city;
 SELECT COUNT(city.name) FROM city;
+SELECT COUNT(city) - count(distinct city) from station;
 SELECT AVG(population) FROM city;
 SELECT MAX(population) FROM city;
 SELECT MIN(population) FROM city;
 SELECT ABS(population) FROM city;
-SELECT COALESCE(a, b, c) /* returns first non null value in a list */
+SELECT POW(population) FROM city;
+/* round num to number of decimals */
+SELECT ROUND(135.375, 2);
+/* round down to the neerest integer */
+SELECT FLOOR(population);
+
+/* returns first non null value in a list */
+SELECT COALESCE(a, b, c)
+/* The REPEAT() function repeats a string as many times as specified */
+SELECT REPEAT(string, number)
+
 SELECT NOW(); /* danasnji datum i vreme */
 SELECT CURRENT_TIMESTAMP(); /* danasnji datum i vreme */
 SELECT DATE_FORMAT(NOW(),'Datum: %d-%Y-%m')
@@ -466,8 +472,10 @@ SELECT CURDATE();
 SELECT CURTIME();
 /* adding interval */
 SELECT DATE_ADD(NOW(), INTERVAL 10 DAY);
-/* Vraća dužinu string-a: */
+
+/* Vraća dužinu string-a in bytes */
 SELECT LENGTH(city.name) FROM city;
+/* returns length in characters */
 SELECT CHAR_LENGTH(city.name) FROM city;
 /* Spajanje nekoliko 'kolona' u jednu: */
 SELECT CONCAT(city.name, ", ", city.district) AS concatString FROM city;
@@ -481,17 +489,43 @@ SELECT UPPER(city.name) FROM city;
 SELECT LTRIM("     SQL ;)  Vežbe     ") AS LeftTrimmedString;
 /* Poređenje dva stringa: */
 SELECT STRCMP(city.name, city.district) FROM city;
-/* kompletan tekst, tekst koji želimo da izmenimo, novi tekst */
+/* kompletan tekst, tekst koji želimo da izmenimo, novi tekst, works on numbers also */
 SELECT REPLACE("moj tekst","moj", "Link");
+/* returns substring of a string counting first one (start_at_position) */
+SELECT SUBSTRING(city, 1, 1)
+SELECT SUBSTRING(city, start_at_position, return_number_of_characters)
+/* returns left substring from point */
+SELECT LEFT(city, 3)
 
-/* adding variable to function*/
+/* converts datatype to specified type */
+SELECT CONVERT('test', CHAR CHARACTER SET utf8);
+SELECT CAST('test' AS CHAR CHARACTER SET utf8);
+SELECT CONVERT('test', CHAR);
+SELECT CAST('test' AS CHAR);
+SELECT CONVERT(columnName, DECIMAL(10,2))
+SELECT CAST(columnName as DECIMAL(10,2))
+    /* must be one of the following
+    DATE  Converts value to DATE. Format: "YYYY-MM-DD"
+    DATETIME  Converts value to DATETIME. Format: "YYYY-MM-DD HH:MM:SS"
+    TIME  Converts value to TIME. Format: "HH:MM:SS"
+    CHAR  Converts value to CHAR (a fixed length string)
+    SIGNED  Converts value to SIGNED (a signed 64-bit integer)
+    UNSIGNED  Converts value to UNSIGNED (an unsigned 64-bit integer)
+    BINARY  Converts value to BINARY (a binary string)
+    DECIMAL Converts string to DECIMAL (total num of digits, num of digits right of decimal point) */
+
+/* adding variable & setting it's value = and := is just a syntatic sugar */
 SET @functionCallVariable = CONCAT('pozdrav ', 'sql');
+SET @functionCallVariable := SELECT CONCAT('pozdrav ', 'sql');
 SELECT @functionCallVariable;
 
 /* advanced functions */
 
-/* if function / ternary function */
+/* select if function / ternary function */
 SELECT IF(6 < 5, 'true', 'false')
+
+/* set if */
+SET col_Z = IF(col_A = 4 OR col_B = 4, 4, NULL)
 
 /* if statements work only in functions & stored procedures */
 /* if statement variant 1 */
@@ -521,13 +555,27 @@ SELECT IFNULL(NULL,'radi'); /* returns 'radi' */
 SELECT IFNULL(500,'ne radi'); /* returns 500 */
 
 /* case function */
+
+/* case variant 1 */
 SELECT city.name, population,
 CASE
-    WHEN population > 5000000 THEN "more"
-    WHEN population > 1000000 THEN "less"
+    WHEN population > 5000000 
+        THEN "more"
+    WHEN population > 1000000 
+        THEN "less"
     ELSE "none"
 END
 FROM city;
+
+/* case variant 2 */
+select 
+case 
+    when not (a + b > c and b + c > a and c + a > b) then "Not A Triangle"
+    when a = b and b = c then "Equilateral"
+    when a = b or b = c or c = a then "Isosceles"
+    else "Scalene" 
+end
+from Triangles;
 
 /* union - combine data from both tables distinct values only */
 SELECT * FROM actor
