@@ -1,5 +1,0 @@
-use Eclipse Maven Integration (m2e) tool:
-
-	delete  .classpath .project .settings and also the Maven target folder
-
-	and reimport project using maven

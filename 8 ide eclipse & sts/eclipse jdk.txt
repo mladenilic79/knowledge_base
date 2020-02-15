@@ -1,7 +1,0 @@
-change default from jre to jdk
-
-add jdk to eclipse start up ini fajl??
-
-also delete jre system library and reimport
-as jre system library with jdk option??
-
