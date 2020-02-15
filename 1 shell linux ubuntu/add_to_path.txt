@@ -10,10 +10,29 @@ source ~/.rvm
 #for folder .rvm for example
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2
-#for adding to path generaly
+for adding to path generaly
 
-#check for all directories added to path
-$ echo path
+check for all directories added to path
+	$ echo $PATH
 
-#add directory to path
-$ export PATH=$PATH:/place/with/the/file
+check for all variables added to path
+	$ env
+
+add variable to path java example
+open file to set for all users
+	$ sudo atom /etc/environment
+just add environment varibale to path on end of file on last line
+JAVA_HOME=" "
++
+/usr/lib/jvm/java-11-openjdk-amd64/bin/java
+=
+	$ JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64/bin/java"
+log in log out or reset environment with
+	$ source /etc/environment
+verify environment variable with
+	$ echo $JAVA_HOME
+Output should return something like
+/usr/lib/jvm/java-11-openjdk-amd64/bin/java
+
+add directory path the same way just with directory path (add colon and path after it)
+

@@ -1,7 +1,0 @@
-	project spring boot with:
-		full security
-		http/https
-		roles & privileges/permissions
-		more relationships (one to one..)
-		spring cash
-		unit & integration testing

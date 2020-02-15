@@ -36,6 +36,9 @@ $ cd ..
 #go back two directories
 $ cd ../..
 
+#open nautilus as root for deleting of locked files/folders
+$sudo nautilus
+
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 files/folders
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -75,6 +78,11 @@ cleaning linux
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 sudo apt autoclean
+sudo apt-get autoclean
 sudo apt-get clean
 sudo apt autoremove
+sudo apt-get autoremove
+
+sudo apt-get install gtkorphan
+sudo gtkorphan
 
