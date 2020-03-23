@@ -18,6 +18,9 @@ navigation
 #return present location
 $ pwd
 
+#return full path of file
+$ echo $(pwd)/file.txt
+
 #list current folder
 $ ls
 #list current folder with hidden content
